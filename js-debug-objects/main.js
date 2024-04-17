@@ -84,3 +84,11 @@ console.log(dieselCars);
 
 console.log('Tutte le altre auto');
 console.log(otherCars);
+
+// 1- la funzione vuole creare degli array contenenti le macchine con le caratteristiche richieste
+// 2- i problemi sono:
+// riga 59 = manca la virgola dopo la parentesi graffa
+// riga 67 = <= va invertito e scritto =>
+// aggiungiamo dopo .type .toLowerCase() per poter comprendere anche le lettere maiuscole e minuscole nell'object.type
+// rimuoviamo la parentesi graffa e il punto e virgola da auto.type === `diesel`
+// sostituiamo in otherCars il || con &&
