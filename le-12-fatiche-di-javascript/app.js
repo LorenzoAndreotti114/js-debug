@@ -1,17 +1,17 @@
 const input = document.querySelector('input');
-const array = null;
+const array = [];
 
 input.addEventListener('keypress', function(event) {
 
     if (event.code != 'Enter')    return;
     if (input.value.length == '') return;
 
-    array.add(input.value);
+    array.push(input.value);
 
     const li = document.createElement('li');
     li.classList.add('list-group-item');
     li.text = input.value;
-    document.querySelector('ul').push(li);
+    document.querySelector('ul').appendChild(li);
 
     let counter = '';
     let item    = array[0];
@@ -39,7 +39,7 @@ input.addEventListener('keypress', function(event) {
         counter = 0;
     }
 
-    const alert = document.getElementsByClassName('alert');
+    const alert = document.querySelector('.alert');
 
     alert.classList.remove('d-none');
     alert.classList.add('d-flex');
@@ -47,4 +47,7 @@ input.addEventListener('keypress', function(event) {
     alert.querySelector('span:first-child').innerText = item;
     alert.querySelector('span:last-child').innerText = max;
 
-    console.log('${item} trovato ${max} volte');
+    console.log(` ${item} trovato ${max} volte `);
+});
+
+console.log();
